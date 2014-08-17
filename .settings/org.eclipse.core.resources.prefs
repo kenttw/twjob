@@ -1,5 +1,3 @@
 eclipse.preferences.version=1
-encoding//src/jobcrawler/jobcrawler/items.py=utf-8
-encoding//src/jobcrawler/jobcrawler/pipelines.py=utf-8
-encoding//src/jobcrawler/jobcrawler/settings.py=utf-8
+encoding//src/jobcrawler/spiders/insidespider.py=utf-8
 encoding//src/test.py=utf-8
