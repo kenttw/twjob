@@ -13,5 +13,12 @@ BOT_NAME = 'jobcrawler'
 SPIDER_MODULES = ['jobcrawler.spiders']
 NEWSPIDER_MODULE = 'jobcrawler.spiders'
 
+########### Item pipeline
+ITEM_PIPELINES = {
+                  "jobcrawler.pipelines.InsideJobList": 10 , 
+}
+
+
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'jobcrawler (+http://www.yourdomain.com)'
