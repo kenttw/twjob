@@ -14,3 +14,6 @@ class RawItem(Item):
     url = Field()
     domain = Field()
     pass
+
+
+
