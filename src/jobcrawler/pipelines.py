@@ -70,7 +70,7 @@ class InsideJobDetail(object):
             
             toHbase(data)
             
-            pass
+#             pass
         return item
     
 def toHbase(item):
@@ -86,7 +86,7 @@ def toHbase(item):
                 writedta ={}
 #                 data['f1:test'] = 'hello'
                 for key , value in item.items(): # get meta terms at pixTerm
-                    writedta['f1:'+key] = value
+                    writedta['f:'+key] = value
                 table.put(item['url'] , writedta)
 #                 print "write to hbase ok "
         except Exception as e:

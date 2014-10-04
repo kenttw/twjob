@@ -8,7 +8,7 @@ import happybase
 from jobcrawler import settings
 
 
-class DocumentToHBase(object):
+class DocumentToHBase:
     
     
     def __init__(self):
@@ -26,7 +26,7 @@ class DocumentToHBase(object):
 #                 rowKey = pixItem.genRowKey()
         #         table.put(rowKey, {'f:qual1': 'value1'})
                 data ={}
-                data['f1:test'] = 'hello'
+                data['f:test'] = 'hello'
 #                 for key , value in pixItem.items(): # get meta terms at pixTerm
 #                     data['f:'+key] = value
                 table.put('key1' , data)
@@ -35,8 +35,8 @@ class DocumentToHBase(object):
             print e
 
 def main():
-    d = DocumentToHBase()
-    d.process_item()
+    aa = DocumentToHBase()
+    aa.process_item()
 
 if __name__ == '__main__':
     main()

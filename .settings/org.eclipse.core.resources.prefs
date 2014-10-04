@@ -3,6 +3,7 @@ encoding//src/jobcrawler/items.py=utf-8
 encoding//src/jobcrawler/pipelines.py=utf-8
 encoding//src/jobcrawler/settings.py=utf-8
 encoding//src/jobcrawler/spiders/insidespider.py=utf-8
+encoding//src/jobcrawler/spiders/job66kspider.py=utf-8
 encoding//src/jobcrawler/utility.py=utf-8
 encoding//src/test.py=utf-8
 encoding//src/testhbase.py=utf-8
