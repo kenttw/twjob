@@ -23,7 +23,7 @@ from jobcrawler import utility
 from jobcrawler.items import RawItem 
 
 
-class InsideSpider(scrapy.Spider):
+class Job66kSpider(scrapy.Spider):
     name = "66KJobSpider"
 #     allowed_domains = ["dmoz.org"]
     start_urls = [
@@ -48,9 +48,7 @@ class InsideSpider(scrapy.Spider):
                 if utility.is66kJobDetail(abs_url) == True: # the blog post html is the highest priority
                     qprioirty = 400
                     yield Request(abs_url,priority=qprioirty)
-                if utility.isInsideJobDetail(abs_url) == True:
-#                     yield Request(abs_url,priority=qprioirty)
-                    pass
+
                     
         if 'text/html' in response.headers['Content-Type']  :
             item = RawItem()

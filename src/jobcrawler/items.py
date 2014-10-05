@@ -13,6 +13,16 @@ class RawItem(Item):
     raw_html = Field()
     url = Field()
     domain = Field()
+    category = Field()
+    money = Field()
+    location = Field()
+    date = Field()
+    jobtitle = Field()
+    jobdetial = Field()
+    companyName = Field()
+    companyUrl = Field()
+    applyMethod = Field()
+    
     pass
 
 

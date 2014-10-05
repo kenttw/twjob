@@ -5,6 +5,8 @@ import argparse
 
 import scrapy.cmdline
 
+import sys
+
 parser = argparse.ArgumentParser(description='Command-line Scrapy crawler')
 parser.add_argument('-u', '--url', dest='urls', help='Comma-separated list of urls to crawl.')
 parser.add_argument('-m', '--mirror', action='store_true', help="Crawl all internal anchor links on the first url's domain.")
@@ -16,12 +18,14 @@ parser.add_argument('-D', '--domains',
                     help='Crawl only anchor links on the specified domains. Overrides -a.')
 parser.add_argument('--url-file', help='File containing a list of urls to crawl.')
 parser.add_argument('--sitemap', help='File containing a sitemap to crawl.')
+parser.add_argument('--spider' , help='which spider')
+
 
 parser.add_argument('-s')
-
 args = parser.parse_args()
+spider = args.spider
 
-cmds = ['scrapy', 'crawl', 'InsideSpider']
+cmds = ['scrapy', 'crawl', spider]
 
 if args.urls is not None:
     cmds.extend(['-a', 'urls=%s' % args.urls])

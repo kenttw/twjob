@@ -17,11 +17,12 @@ NEWSPIDER_MODULE = 'jobcrawler.spiders'
 ITEM_PIPELINES = {
                   "jobcrawler.pipelines.InsideJobList": 10 , 
                   "jobcrawler.pipelines.InsideJobDetail": 30 , 
+                  "jobcrawler.pipelines.Job66KDetail" : 30 ,
 }
 
 DOWNLOADER_MIDDLEWARES = {
      'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware' : None,
-     'TBBKAnalysis.spiders.rotate_useragent.RotateUserAgentMiddleware' :400
+     'jobcrawler.spiders.rotate_useragent.RotateUserAgentMiddleware' :400
 }
 
 HADOOP_HOST = '210.63.38.213'
