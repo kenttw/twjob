@@ -10,3 +10,6 @@ python ${workspace_loc:twjob/src/twjobcrawler.py} --spider 66KJobSpider  --domai
 ```sh
 python ${workspace_loc:twjob/src/twjobcrawler.py} --spider InsideSpider --domains jobs.inside.com.tw --url http://jobs.inside.com.tw/
 ```
+
+Installation Library Linux or Mac
+- apt-get install libxml2-dev libxslt1-dev python-dev
